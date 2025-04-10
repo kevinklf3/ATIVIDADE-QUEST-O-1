@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+    <script>
+        function calcular() {
+            
+            let operacao = prompt("Digite a operação (+, -, *, /):");
+
+            
+            let num1 = parseFloat(prompt("Digite o primeiro número:"));
+            let num2 = parseFloat(prompt("Digite o segundo número:"));
+
+            let resultado;
+
+            switch (operacao) {
+                case '+':
+                    resultado = num1 + num2;
+                    break;
+                case '-':
+                    resultado = num1 - num2;
+                    break;
+                case '*':
+                    resultado = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 !== 0) {
+                        resultado = num1 / num2;
+                    } else {
+                        resultado = "Erro: divisão por zero!";
+                    }
+                    break;
+                default:
+                    resultado = "Operação inválida!";
+            }
+
+         
+            alert("Resultado: " + resultado);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora com JavaScript</h1>
+    <button onclick="calcular()">Clique para calcular</button>
+</body>
+</html>
